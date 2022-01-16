@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
 int main(){
-    cout<<"affa"<<endl;
+    cout<<"test"<<endl;
     return 0;
 }
