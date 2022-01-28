@@ -46,8 +46,7 @@ int main(){
         showMenu();
         cin>>num;
 
-        switch(num)
-        {
+        switch(num){
             case 1:  // 添加联系人
                 addPerson(&abk);
 			    break;
