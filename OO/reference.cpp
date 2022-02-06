@@ -63,7 +63,7 @@ int main(){
     // int &ref2 = 10; //报错: 引用本身需要一个合法的内存空间
     // 加const后,编译器自动优化代码为: int temp = 10; int &ref2 = 10;
     const int & ref2  = 10;
-    ref2 = 100; // 报错: 加const后不可修改变量
+    // ref2 = 100; // 报错: 加const后不可修改变量
 
     int x1 =100, x2 = 100;
     showValue(x1, x2);
@@ -85,6 +85,6 @@ int &ref(){
 }
 
 void showValue(const int &a, int &b){
-    a += 10;  // 报错, a 不能修改
+    // a += 10;  // 报错, a 不能修改
     b += 10;
 }
