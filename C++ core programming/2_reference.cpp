@@ -69,7 +69,6 @@ int main(){
     showValue(x1, x2);
     cout<<"x1 = "<<x1<<"\tx2 = "<<x2<<endl;
 
-    system("pause");
     return 0;
 }
 
