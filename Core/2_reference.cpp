@@ -57,12 +57,12 @@ int main(){
     cout<<"reff = "<<reff<<endl;  // reff = 100
 
     // 引用的本质: 指针常量,编译器发现引用将自动转换
-    int &ref = a;  // 自动转换为: int * const ref = &a;
+    int &ref = a;  // 自动转换为: int* const ref = &a;
     ref = 362425;  // 自动转换为: *ref = 362425;
 
     // int &ref2 = 10; //报错: 引用本身需要一个合法的内存空间
     // 加const后,编译器自动优化代码为: int temp = 10; int &ref2 = 10;
-    const int & ref2  = 10;
+    const int& ref2  = 10;
     // ref2 = 100; // 报错: 加const后不可修改变量
 
     int x1 =100, x2 = 100;
@@ -78,7 +78,7 @@ void swap(int &a, int &b){
     b = temp;
 }
 
-int &ref(){
+int& ref(){
     static int a = 10;
     return a;  // 返回静态变量
 }
