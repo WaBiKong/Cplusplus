@@ -2699,24 +2699,24 @@ C++中对文件操作需要包含头文件 &lt; fstream &gt;
 
 1. 包含头文件   
 
-		#include<fstream>
+   `#include<fstream>`
 
 2. 创建流对象  
 
-   		ofstream ofs;
+    `ofstream ofs;`
 
 3. 打开文件
 
-   		ofs.open("文件路径", 打开方式);
+    `ofs.open("文件路径", 打开方式);`
 
 4. 写数据
 
-   		ofs<<"写入的数据";
+    `ofs<<"写入的数据";`
 
 5. 关闭文件
 
-  		 ofs.close();
-​
+    `ofs.close();`
+
 文件打开方式: 
 
 | 打开方式    | 解释                       |
@@ -2774,23 +2774,23 @@ int main(){
 
 1. 包含头文件   
 
-    	#include<fstream>
+    `#include<fstream>`
 
 2. 创建流对象  
 
-   		ifstream ifs;
+    `ifstream ifs;`
 
 3. 打开文件并判断文件是否打开成功
 
-   		ifs.open("文件路径", 打开方式);
+    `ifs.open("文件路径", 打开方式);`
 
 4. 读数据
 
-   		四种方式读取
+     四种方式读取
 
 5. 关闭文件
 
-   		ifs.close();
+    `ifs.close();`
 
 **示例:** 
 
