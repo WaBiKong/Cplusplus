@@ -8,6 +8,7 @@
 
 void managerMenu(Identity* &manager);
 void studentMenu(Identity * &student);
+void teacherMenu(Identity * &teacher);
 
 void Login(string fileName, int type){
     Identity* person = NULL; // 多态: 父类指针指向子类对象
@@ -56,6 +57,7 @@ void Login(string fileName, int type){
                 cout<<"教师登录验证成功!"<<endl;
                 system("pause");
                 person = new Teacher(id, name, pwd);
+                teacherMenu(person);
                 return;
             }
         }
@@ -104,7 +106,8 @@ void managerMenu(Identity* &manager){
         }
     }
 }
-void studentMenu(Identity * &student){
+
+void studentMenu(Identity* &student){
     while(true){
 		//学生菜单
 		student->openMenu();
@@ -129,4 +132,29 @@ void studentMenu(Identity * &student){
 			return;
 		}
 	}    
+}
+
+void teacherMenu(Identity* &teacher){
+	while (true){
+		//教师菜单
+		teacher->openMenu();
+
+		Teacher* tea = (Teacher*)teacher;
+		int select = 0;
+
+		cin>>select;
+
+		if(select == 1){
+			//查看所有预约
+			tea->showAllOrder();
+		}else if(select == 2){
+			//审核预约
+			tea->validationOrder();
+		}else{
+			delete teacher;
+			cout<<"注销成功"<<endl;
+			system("pause");
+			return;
+		}
+	}
 }
