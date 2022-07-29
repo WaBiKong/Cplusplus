@@ -4,8 +4,8 @@ int main(){ // windows下的各种编译器都是默认32位
 
     // 指针所占内存：
     // 32位操作系统下占4个字节，64位操作系统下占8个字节
-    cout<<sizeof(int *)<<endl;  // 4
-    cout<<sizeof(char *)<<endl; // 4
+    cout<<sizeof(int *)<<endl;
+    cout<<sizeof(char *)<<endl;
 
     // 空指针和野指针都不是我们申请的空间，因此不要访问
     // 空指针：NULL，指向地址编号0
